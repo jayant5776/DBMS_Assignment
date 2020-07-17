@@ -1,0 +1,9 @@
+1)Does ANSI recognize the data type DATE?
+ans: yes,default date format : 1990-11-15.
+
+2)Which subdivision of SQL is used to insert values in tables?
+ans: Data Manipulation Language : It contains various syntaxes related to manipulation of data
+
+To Insert data there is an insert syntax which works as follows
+
+Insert into tablename(col1,col2,col3..)  values (col1data,col2data,…);
