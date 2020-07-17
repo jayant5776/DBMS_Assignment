@@ -1,0 +1,94 @@
+Create table SEMP
+(
+	EMPNO CHAR(4),
+	EMPNAME CHAR(20),
+	BASIC FLOAT(9,2),
+	DEPTNO CHAR(2),
+	DEPTHEAD CHAR(4)
+);
+
+create table sdept
+(
+	DEPTNO CHAR(2),
+	DEPTNAME CHAR(15)
+);
+
+INSERT INTO SDEPT VALUES('10','Development');
+INSERT INTO SDEPT VALUES('20','Training');
+
+INSERT INTO SEMP(EMPNO, EMPNAME, BASIC, DEPTNO)
+VALUES('0001','SUNIL',6000,'10');
+INSERT INTO SEMP(EMPNO, EMPNAME, BASIC, DEPTNO)
+VALUES('0002','HIREN',8000,'20');
+INSERT INTO SEMP(EMPNO, EMPNAME, BASIC, DEPTNO, DEPTHEAD)
+VALUES('0003','ALI',4000,'10','0001');
+INSERT INTO SEMP(EMPNO, EMPNAME, BASIC, DEPTHEAD)
+VALUES('0004','GEORGE',6000,'0002');
+
+Create Table Supplier
+(
+	`S#` varchar(10),
+	Sname varchar(10),
+	Status varchar(10),
+	City varchar(20)
+);
+
+insert into supplier values
+('S1','Jack','10','Kolhapur'),
+('S2','john','20','sangli'),
+('S3','Patil','30','satara');
+
+Create table parts
+(
+	`P#` varchar(10),
+	Pname char(10),
+	Color varchar(10),
+	Weight float(3,2),
+	City varchar(10)
+);
+
+insert into parts values
+('P1','Pavan','Red',1.30,'Kolhapur'),
+('P2','Vaibhav','White',2.45,'sangli'),
+('P3','Mayuri','Orange',7.52,'satara');
+
+Create table projects
+(
+	`J#` varchar(10),
+	Jname char(10),
+	City varchar(10)
+);
+
+insert into projects values
+('J1','Avinash','benglore'),
+('J2','Pratik','Chennai'),
+('J3','Shubham','Mumbai');
+
+
+create table SPJ
+(
+	`S#` varchar(10),
+	`P#` Varchar(10),
+	`J#` varchar(10),
+	Qty int(10)
+);
+
+insert into SPJ values
+('S1','P1','J1',20),
+('S2','P2','J2',40),
+('S3','P3','J3',60);
+
+
+select * from supplier;
+
+select `S#`, Sname from Supplier;
+
+select pname, color from Parts where city = 'kolhapur';
+
+select sname from supplier where city = 'kolhapur';
+
+select sname from supplier where city = 'sangli' or city = 'satara';
+
+select * from projects where city= 'mumbai';
+
+select Pname from Parts where weight>12 and weight<14;
