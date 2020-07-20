@@ -1,0 +1,15 @@
+1. select concat(upper(substr(sname,1,1)),lower(substr(sname,2)))from supplier;
+
+2. select upper(sname) from supplier;
+
+3. select lower(sname) from supplier;
+
+4. select lpad(sname,25,' ') from supplier;
+
+5. select replace (sname,'la','ro')from supplier;
+
+6. select replace(replace(sname,'l','r'),'a','o')from supplier;
+
+7. select sname, length(sname) from supplier;
+
+8. select * from supplier where soundex(sname)= soundex('BLOCK');
