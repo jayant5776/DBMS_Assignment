@@ -1,0 +1,7 @@
+1. select onum,snum, (amt*12)/100 commission from orders;
+
+2. select max(rating), cname from customers;
+
+3. select rating,cname,cnum from customers order by rating desc;
+
+4.  select count(odate) "total orders",odate from orders group by odate order by "total orders" desc;
