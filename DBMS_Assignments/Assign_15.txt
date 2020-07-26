@@ -1,0 +1,5 @@
+1. CREATE TABLE Multicast AS SELECT * FROM salespeople WHERE snum IN (SELECT snum FROM customers GROUP BY snum HAVING count(snum)>1);
+
+2. DELETE customers WHERE cnum=ANY (SELECT cnum FROM orders WHERE cnum NOT IN (SELECT cnum FROM customers));
+
+3. UPDATE salespeople SET comm=comm*1.20 WHERE snum IN (SELECT snum FROM or WHERE amt>300);
