@@ -1,0 +1,26 @@
+1. create table orders_copy
+    -> (
+    -> onum int(4) primary key,
+    -> snum int(4),
+    -> cnum int(4),
+    -> odate date,
+    -> Constraint f_k_1 foreign key(snum),
+    -> constraint f_k_2 foreign key(cnum)
+    -> );
+
+2.  create table salespeople
+    (
+    snum int(4) primary key,
+    sname varchar(20) check(substr(sname = upper(cname)) between 'A' and 'M'),
+    comm float(5,2) default 10
+    );
+
+3.  create table order_copy
+    -> (
+    -> onum int(4),
+    -> amt float(7,2),
+    -> odate date,
+    -> cnum int(4),
+    -> snum int(4),
+    -> constraint check(onum > cnum and cnum > snum)
+    -> );

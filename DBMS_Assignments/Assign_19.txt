@@ -1,0 +1,7 @@
+1. create view high_rating_cust as select * from customers where rating = (select max(rating) from customers);
+
+2. create view count_city as select city, count(city) from salespeople group by city;
+
+3. create view v3 as select s.sname, avg(o.onum), count(o.onum) 'total orders' from sales s, orders o where o.snum =s.snum group by sname;
+
+4. create view v4 as select sname, cname from sales s, cust c where s.snum = c.snum;
