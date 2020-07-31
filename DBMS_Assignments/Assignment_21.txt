@@ -1,0 +1,29 @@
+1.   GRANT UPDATE ON customers TO Ashish ;
+
+     UPDATE ON customers FROM Ashish ;
+
+
+
+2.    GRANT SELECT ON orders TO Ishaan WITH GRANT OPTION;
+
+     SELECT ON ishaan.orders TO ashish;
+
+     Grant UPDATE ON ishaan.orders TO ashish;
+
+
+3. INSERT ON salespeople FROM Ajita;
+
+
+4.   CREATE OR REPLACE VIEW range100 AS
+     SELECT * FROM customers
+     WHERE rating BETWEEN 100 AND 500 WITH CHECK OPTION;
+
+     GRANT UPDATE ON range100 TO Abhijeet;
+
+
+
+5.   CREATE OR REPLACE VIEW restrictmin AS SELECT * FROM customers WHERE rating NOT IN (SELECT min(rating)
+     FROM customers);
+
+     SELECT ON restrictmin TO Vikram;
+
