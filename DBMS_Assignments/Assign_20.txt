@@ -1,0 +1,8 @@
+1. a)yes
+   b)no
+   c)no
+   d)yes
+
+2. create view commissions as select snum, comm from sales where comm between .10 and .20;
+
+3.
